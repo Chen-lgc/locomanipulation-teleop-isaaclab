@@ -4,8 +4,8 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(dir_path+"/../")
 sys.path.append(dir_path+"/../scripts/rsl_rl")
 
-robot = 'go2'  # 'go2', 'a2' (both with the piper_l arm)
-scene = 'scene_rough'  # scene_flat, scene_rough
+robot = 'a2'  # 'go2', 'a2' (both with the piper_l arm)
+scene = 'scene_flat'  # scene_flat, scene_rough
 
 # ----------------------------------------------------------------------------------------------------------------
 if(robot == "go2"):
@@ -15,7 +15,8 @@ if(robot == "go2"):
     Kp_stand_up_and_down = 50.
     Kd_stand_up_and_down = 5.
 
-    locomotion_policy_folder_path = dir_path + "/../tested_policies/" + robot + "/arm_moving_clock"
+    # locomotion_policy_folder_path = dir_path + "/../tested_policies/" + robot + "/arm_moving_clock"
+    locomotion_policy_folder_path = "logs/rsl_rl/flat_direct/2026-11-05_19-01-47"
 
 elif(robot == "a2"):
     Kp_walking = 50.
@@ -24,7 +25,8 @@ elif(robot == "a2"):
     Kp_stand_up_and_down = 50.
     Kd_stand_up_and_down = 5.
 
-    locomotion_policy_folder_path = dir_path + "/../tested_policies/" + robot + "/arm_moving_clock"
+    # locomotion_policy_folder_path = dir_path + "/../tested_policies/" + robot + "/arm_moving_clock"
+    locomotion_policy_folder_path = "logs/rsl_rl/flat_direct/2026-11-11_13-59-09"
 
 # MuJoCo model of the robot with the arm, in the chosen scene
 robot_model_path = dir_path + "/../robot_model/" + robot + "_piper_l_" + scene + ".xml"

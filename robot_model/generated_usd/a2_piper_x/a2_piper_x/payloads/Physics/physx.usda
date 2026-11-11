@@ -1,0 +1,212 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "MuJoCo USD Converter v0.6.1"
+    }
+    defaultPrim = "a2_piper_x"
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "a2_piper_x"
+{
+    over "Geometry"
+    {
+        over "base"
+        {
+            over "FL_hip"
+            {
+                over "FL_thigh"
+                {
+                    over "FL_calf"
+                    {
+                        over "FL_calf_joint" (
+                            prepend apiSchemas = ["PhysxJointAPI"]
+                        )
+                        {
+                        }
+                    }
+
+                    over "FL_thigh_joint" (
+                        prepend apiSchemas = ["PhysxJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "FL_hip_joint" (
+                    prepend apiSchemas = ["PhysxJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "FR_hip"
+            {
+                over "FR_thigh"
+                {
+                    over "FR_calf"
+                    {
+                        over "FR_calf_joint" (
+                            prepend apiSchemas = ["PhysxJointAPI"]
+                        )
+                        {
+                        }
+                    }
+
+                    over "FR_thigh_joint" (
+                        prepend apiSchemas = ["PhysxJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "FR_hip_joint" (
+                    prepend apiSchemas = ["PhysxJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "RL_hip"
+            {
+                over "RL_thigh"
+                {
+                    over "RL_calf"
+                    {
+                        over "RL_calf_joint" (
+                            prepend apiSchemas = ["PhysxJointAPI"]
+                        )
+                        {
+                        }
+                    }
+
+                    over "RL_thigh_joint" (
+                        prepend apiSchemas = ["PhysxJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "RL_hip_joint" (
+                    prepend apiSchemas = ["PhysxJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "RR_hip"
+            {
+                over "RR_thigh"
+                {
+                    over "RR_calf"
+                    {
+                        over "RR_calf_joint" (
+                            prepend apiSchemas = ["PhysxJointAPI"]
+                        )
+                        {
+                        }
+                    }
+
+                    over "RR_thigh_joint" (
+                        prepend apiSchemas = ["PhysxJointAPI"]
+                    )
+                    {
+                    }
+                }
+
+                over "RR_hip_joint" (
+                    prepend apiSchemas = ["PhysxJointAPI"]
+                )
+                {
+                }
+            }
+
+            over "piperx_mount"
+            {
+                over "link1"
+                {
+                    over "link2"
+                    {
+                        over "link3"
+                        {
+                            over "link4"
+                            {
+                                over "link5"
+                                {
+                                    over "link6"
+                                    {
+                                        over "piperx_flange"
+                                        {
+                                            over "piperx_gripper_base"
+                                            {
+                                                over "link7"
+                                                {
+                                                    over "joint7" (
+                                                        prepend apiSchemas = ["PhysxJointAPI"]
+                                                    )
+                                                    {
+                                                    }
+                                                }
+
+                                                over "link8"
+                                                {
+                                                    over "joint8" (
+                                                        prepend apiSchemas = ["PhysxJointAPI"]
+                                                    )
+                                                    {
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        over "joint6" (
+                                            prepend apiSchemas = ["PhysxJointAPI"]
+                                        )
+                                        {
+                                        }
+                                    }
+
+                                    over "joint5" (
+                                        prepend apiSchemas = ["PhysxJointAPI"]
+                                    )
+                                    {
+                                    }
+                                }
+
+                                over "joint4" (
+                                    prepend apiSchemas = ["PhysxJointAPI"]
+                                )
+                                {
+                                }
+                            }
+
+                            over "joint3" (
+                                prepend apiSchemas = ["PhysxJointAPI"]
+                            )
+                            {
+                            }
+                        }
+
+                        over "joint2" (
+                            prepend apiSchemas = ["PhysxJointAPI"]
+                        )
+                        {
+                        }
+                    }
+
+                    over "joint1" (
+                        prepend apiSchemas = ["PhysxJointAPI"]
+                    )
+                    {
+                    }
+                }
+            }
+        }
+    }
+}
+

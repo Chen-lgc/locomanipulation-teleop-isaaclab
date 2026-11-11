@@ -1,0 +1,1675 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "MuJoCo USD Converter v0.6.1"
+    }
+    defaultPrim = "a2_piper_x"
+    doc = """Generated from Composed Stage of root layer /home/yons/locomanipulation-teleop-isaaclab/robot_model/generated_usd/a2_piper_x/a2_piper_x/.asset-transformer-63_ihr5g/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./robot.usda@
+    ]
+    upAxis = "Z"
+)
+
+def Xform "a2_piper_x" (
+    prepend apiSchemas = ["GeomModelAPI", "IsaacRobotAPI"]
+    assetInfo = {
+        string name = "a2_piper_x"
+    }
+    kind = "component"
+)
+{
+    float3[] extentsHint = [(-0.32785073, -0.22923286, 0.11866025), (0.3872476, 0.22923286, 1.0976256), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.33043003, -0.23490301, 0.118), (0.39116636, 0.23490301, 1.0400319)]
+    custom rel isaac:physics:robotJoints
+    custom rel isaac:physics:robotLinks
+    custom token isaac:robotType = "Default"
+
+    def Scope "Geometry"
+    {
+        def Xform "base" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0, 0, 0.7)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Xform "base_link" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/base_link>
+            )
+            {
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Box" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+            )
+            {
+                float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                color3f[] primvars:displayColor = [(0.792157, 0.819608, 0.933333)] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayColor:indices = None
+                float[] primvars:displayOpacity = [1] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayOpacity:indices = None
+                uniform token purpose = "guide"
+                double size = 2
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.12, 0.14, 0.085)
+                double3 xformOp:translate = (0, 0, 0.007)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Box_1" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                displayName = "Box"
+                uiHints = {
+                    string displayName = "Box"
+                }
+            )
+            {
+                float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                color3f[] primvars:displayColor = [(0.792157, 0.819608, 0.933333)] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayColor:indices = None
+                float[] primvars:displayOpacity = [1] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayOpacity:indices = None
+                uniform token purpose = "guide"
+                double size = 2
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.04, 0.025, 0.01)
+                double3 xformOp:translate = (0.25, 0, 0.119)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Box_2" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                displayName = "Box"
+                uiHints = {
+                    string displayName = "Box"
+                }
+            )
+            {
+                float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                color3f[] primvars:displayColor = [(0.792157, 0.819608, 0.933333)] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayColor:indices = None
+                float[] primvars:displayOpacity = [1] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayOpacity:indices = None
+                uniform token purpose = "guide"
+                double size = 2
+                quatf xformOp:orient = (0.9998875, 0, -0.014997843, 0)
+                float3 xformOp:scale = (0.025, 0.015, 0.008)
+                double3 xformOp:translate = (-0.22, 0, 0.119)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Box_3" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                displayName = "Box"
+                uiHints = {
+                    string displayName = "Box"
+                }
+            )
+            {
+                float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                color3f[] primvars:displayColor = [(0.792157, 0.819608, 0.933333)] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayColor:indices = None
+                float[] primvars:displayOpacity = [1] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayOpacity:indices = None
+                uniform token purpose = "guide"
+                double size = 2
+                quatf xformOp:orient = (0.93937266, 0, -0.34289795, 0)
+                float3 xformOp:scale = (0.03, 0.05, 0.005)
+                double3 xformOp:translate = (0.365, 0, 0.1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Box_4" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                displayName = "Box"
+                uiHints = {
+                    string displayName = "Box"
+                }
+            )
+            {
+                float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                color3f[] primvars:displayColor = [(0.792157, 0.819608, 0.933333)] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayColor:indices = None
+                float[] primvars:displayOpacity = [1] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayOpacity:indices = None
+                uniform token purpose = "guide"
+                double size = 2
+                quatf xformOp:orient = (0.93937266, 0, 0.34289795, 0)
+                float3 xformOp:scale = (0.0225, 0.05, 0.005)
+                double3 xformOp:translate = (-0.31, 0, 0.112)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Box_5" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                displayName = "Box"
+                uiHints = {
+                    string displayName = "Box"
+                }
+            )
+            {
+                float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                rel material:binding = </a2_piper_x/Materials/gray>
+                color3f[] primvars:displayColor = [(0.5, 0.5, 0.5)] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayColor:indices = None
+                float[] primvars:displayOpacity = [1] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayOpacity:indices = None
+                double size = 2
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.07, 0.04, 0.01)
+                double3 xformOp:translate = (-0.02, 0, 0.09)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Box_6" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                displayName = "Box"
+                uiHints = {
+                    string displayName = "Box"
+                }
+            )
+            {
+                float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                color3f[] primvars:displayColor = [(0.5, 0.5, 0.5)] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayColor:indices = None
+                float[] primvars:displayOpacity = [1] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayOpacity:indices = None
+                uniform token purpose = "guide"
+                double size = 2
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.07, 0.04, 0.01)
+                double3 xformOp:translate = (-0.02, 0, 0.09)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Sphere "imu"
+            {
+                float3[] extent = [(-0.005, -0.005, -0.005), (0.005, 0.005, 0.005)]
+                color3f[] primvars:displayColor = [(0.5, 0.5, 0.5)] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayColor:indices = None
+                float[] primvars:displayOpacity = [1] (
+                    interpolation = "constant"
+                )
+                int[] primvars:displayOpacity:indices = None
+                uniform token purpose = "guide"
+                double radius = 0.005
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Xform "FL_hip" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.25944, 0.075113, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "left_front_Link1" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/left_front_Link1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "FL_thigh" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0.12779, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "left_front_Link2" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/left_front_Link2>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Capsule "Capsule" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.048, -0.048, -0.108), (0.048, 0.048, 0.108)]
+                        double height = 0.12
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double radius = 0.048
+                        quatf xformOp:orient = (0.70703477, 0.7071788, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, -0.08, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "Box" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double size = 2
+                        quatf xformOp:orient = (0.99998754, 0, 0.0049914513, 0)
+                        float3 xformOp:scale = (0.0275, 0.018, 0.085)
+                        double3 xformOp:translate = (-0.025, 0, -0.09)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "Box_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                        displayName = "Box"
+                        uiHints = {
+                            string displayName = "Box"
+                        }
+                    )
+                    {
+                        float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double size = 2
+                        quatf xformOp:orient = (0.9305076, 0, -0.3662726, 0)
+                        float3 xformOp:scale = (0.0085, 0.025, 0.025)
+                        double3 xformOp:translate = (-0.022, 0, -0.27)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "FL_calf" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, -0.275)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "left_front_Link3" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/left_front_Link3>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.99280864, 0, -0.119712174, 0)
+                            float3 xformOp:scale = (0.012, 0.015, 0.05)
+                            double3 xformOp:translate = (0.018, 0, -0.08)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_1" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.9998875, 0, -0.014997843, 0)
+                            float3 xformOp:scale = (0.011, 0.015, 0.04)
+                            double3 xformOp:translate = (0.033, 0, -0.17)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_2" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.9950042, 0, 0.0998333, 0)
+                            float3 xformOp:scale = (0.01, 0.018, 0.03)
+                            double3 xformOp:translate = (0.029, 0, -0.236)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_3" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.94275475, 0, 0.33348686, 0)
+                            float3 xformOp:scale = (0.005, 0.018, 0.03)
+                            double3 xformOp:translate = (0.008, 0, -0.23)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "left_front_Link4" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/left_front_Link4>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, -0.275)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "FL_foot" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, -0.275)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                            def Sphere "FL" (
+                                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            )
+                            {
+                                float3[] extent = [(-0.032, -0.032, -0.032), (0.032, 0.032, 0.032)]
+                                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial_1>
+                                color3f[] primvars:displayColor = [(0.698039, 0.698039, 0.698039)] (
+                                    interpolation = "constant"
+                                )
+                                int[] primvars:displayColor:indices = None
+                                float[] primvars:displayOpacity = [1] (
+                                    interpolation = "constant"
+                                )
+                                int[] primvars:displayOpacity:indices = None
+                                uniform token purpose = "guide"
+                                double radius = 0.032
+                                quatf xformOp:orient = (1, 0, 0, 0)
+                                float3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+                }
+            }
+
+            def Xform "FR_hip" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.25944, -0.075113, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "right_front_Link1" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/right_front_Link1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "FR_thigh" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, -0.12779, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "right_front_Link2" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/right_front_Link2>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Capsule "Capsule" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.048, -0.048, -0.108), (0.048, 0.048, 0.108)]
+                        double height = 0.12
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double radius = 0.048
+                        quatf xformOp:orient = (0.70703477, 0.7071788, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0.08, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "Box" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double size = 2
+                        quatf xformOp:orient = (0.99998754, 0, 0.0049914513, 0)
+                        float3 xformOp:scale = (0.0275, 0.018, 0.085)
+                        double3 xformOp:translate = (-0.025, 0, -0.09)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "Box_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                        displayName = "Box"
+                        uiHints = {
+                            string displayName = "Box"
+                        }
+                    )
+                    {
+                        float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double size = 2
+                        quatf xformOp:orient = (0.9305076, 0, -0.3662726, 0)
+                        float3 xformOp:scale = (0.0085, 0.025, 0.025)
+                        double3 xformOp:translate = (-0.022, 0, -0.27)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "FR_calf" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, -0.275)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "right_front_Link3" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/left_front_Link3>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.99280864, 0, -0.119712174, 0)
+                            float3 xformOp:scale = (0.012, 0.015, 0.05)
+                            double3 xformOp:translate = (0.018, 0, -0.08)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_1" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.9998875, 0, -0.014997843, 0)
+                            float3 xformOp:scale = (0.011, 0.015, 0.04)
+                            double3 xformOp:translate = (0.033, 0, -0.17)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_2" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.9950042, 0, 0.0998333, 0)
+                            float3 xformOp:scale = (0.01, 0.018, 0.03)
+                            double3 xformOp:translate = (0.029, 0, -0.236)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_3" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.94275475, 0, 0.33348686, 0)
+                            float3 xformOp:scale = (0.005, 0.018, 0.03)
+                            double3 xformOp:translate = (0.008, 0, -0.23)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "right_front_Link4" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/right_front_Link4>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, -0.275)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "FR_foot" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, -0.275)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                            def Sphere "FR" (
+                                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            )
+                            {
+                                float3[] extent = [(-0.032, -0.032, -0.032), (0.032, 0.032, 0.032)]
+                                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial_1>
+                                color3f[] primvars:displayColor = [(0.698039, 0.698039, 0.698039)] (
+                                    interpolation = "constant"
+                                )
+                                int[] primvars:displayColor:indices = None
+                                float[] primvars:displayOpacity = [1] (
+                                    interpolation = "constant"
+                                )
+                                int[] primvars:displayOpacity:indices = None
+                                uniform token purpose = "guide"
+                                double radius = 0.032
+                                quatf xformOp:orient = (1, 0, 0, 0)
+                                float3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+                }
+            }
+
+            def Xform "RL_hip" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-0.25944, 0.075113, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "left_hind_Link1" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/left_hind_Link1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "RL_thigh" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0.12779, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "left_hind_Link2" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/left_hind_Link2>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Capsule "Capsule" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.048, -0.048, -0.108), (0.048, 0.048, 0.108)]
+                        double height = 0.12
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double radius = 0.048
+                        quatf xformOp:orient = (0.70703477, 0.7071788, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, -0.08, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "Box" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double size = 2
+                        quatf xformOp:orient = (0.99998754, 0, 0.0049914513, 0)
+                        float3 xformOp:scale = (0.0275, 0.018, 0.085)
+                        double3 xformOp:translate = (-0.025, 0, -0.09)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "Box_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                        displayName = "Box"
+                        uiHints = {
+                            string displayName = "Box"
+                        }
+                    )
+                    {
+                        float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double size = 2
+                        quatf xformOp:orient = (0.9305076, 0, -0.3662726, 0)
+                        float3 xformOp:scale = (0.0085, 0.025, 0.025)
+                        double3 xformOp:translate = (-0.022, 0, -0.27)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "RL_calf" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, -0.275)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "left_hind_Link3" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/left_front_Link3>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.99280864, 0, -0.119712174, 0)
+                            float3 xformOp:scale = (0.012, 0.015, 0.05)
+                            double3 xformOp:translate = (0.018, 0, -0.08)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_1" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.9998875, 0, -0.014997843, 0)
+                            float3 xformOp:scale = (0.011, 0.015, 0.04)
+                            double3 xformOp:translate = (0.033, 0, -0.17)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_2" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.9950042, 0, 0.0998333, 0)
+                            float3 xformOp:scale = (0.01, 0.018, 0.03)
+                            double3 xformOp:translate = (0.029, 0, -0.236)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_3" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.94275475, 0, 0.33348686, 0)
+                            float3 xformOp:scale = (0.005, 0.018, 0.03)
+                            double3 xformOp:translate = (0.008, 0, -0.23)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "left_hind_Link4" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/left_front_Link4>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, -0.275)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "RL_foot" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, -0.275)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                            def Sphere "RL" (
+                                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            )
+                            {
+                                float3[] extent = [(-0.032, -0.032, -0.032), (0.032, 0.032, 0.032)]
+                                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial_1>
+                                color3f[] primvars:displayColor = [(0.698039, 0.698039, 0.698039)] (
+                                    interpolation = "constant"
+                                )
+                                int[] primvars:displayColor:indices = None
+                                float[] primvars:displayOpacity = [1] (
+                                    interpolation = "constant"
+                                )
+                                int[] primvars:displayOpacity:indices = None
+                                uniform token purpose = "guide"
+                                double radius = 0.032
+                                quatf xformOp:orient = (1, 0, 0, 0)
+                                float3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+                }
+            }
+
+            def Xform "RR_hip" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-0.25944, -0.075113, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "right_hind_Link1" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/right_hind_Link1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "RR_thigh" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    quatf xformOp:orient = (1, 0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, -0.12779, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "right_hind_Link2" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/right_hind_Link2>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Capsule "Capsule" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        uniform token axis = "Z"
+                        float3[] extent = [(-0.048, -0.048, -0.108), (0.048, 0.048, 0.108)]
+                        double height = 0.12
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double radius = 0.048
+                        quatf xformOp:orient = (0.70703477, 0.7071788, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0.08, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "Box" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                    )
+                    {
+                        float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double size = 2
+                        quatf xformOp:orient = (0.99998754, 0, 0.0049914513, 0)
+                        float3 xformOp:scale = (0.0275, 0.018, 0.085)
+                        double3 xformOp:translate = (-0.025, 0, -0.09)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Cube "Box_1" (
+                        prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                        displayName = "Box"
+                        uiHints = {
+                            string displayName = "Box"
+                        }
+                    )
+                    {
+                        float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                        rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                        color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayColor:indices = None
+                        float[] primvars:displayOpacity = [1] (
+                            interpolation = "constant"
+                        )
+                        int[] primvars:displayOpacity:indices = None
+                        uniform token purpose = "guide"
+                        double size = 2
+                        quatf xformOp:orient = (0.9305076, 0, -0.3662726, 0)
+                        float3 xformOp:scale = (0.0085, 0.025, 0.025)
+                        double3 xformOp:translate = (-0.022, 0, -0.27)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "RR_calf" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        quatf xformOp:orient = (1, 0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, -0.275)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "right_hind_Link3" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/left_front_Link3>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.99280864, 0, -0.119712174, 0)
+                            float3 xformOp:scale = (0.012, 0.015, 0.05)
+                            double3 xformOp:translate = (0.018, 0, -0.08)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_1" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.9998875, 0, -0.014997843, 0)
+                            float3 xformOp:scale = (0.011, 0.015, 0.04)
+                            double3 xformOp:translate = (0.033, 0, -0.17)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_2" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.9950042, 0, 0.0998333, 0)
+                            float3 xformOp:scale = (0.01, 0.018, 0.03)
+                            double3 xformOp:translate = (0.029, 0, -0.236)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Cube "Box_3" (
+                            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            displayName = "Box"
+                            uiHints = {
+                                string displayName = "Box"
+                            }
+                        )
+                        {
+                            float3[] extent = [(-1, -1, -1), (1, 1, 1)]
+                            rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial>
+                            color3f[] primvars:displayColor = [(0.898039, 0.917647, 0.929412)] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayColor:indices = None
+                            float[] primvars:displayOpacity = [1] (
+                                interpolation = "constant"
+                            )
+                            int[] primvars:displayOpacity:indices = None
+                            uniform token purpose = "guide"
+                            double size = 2
+                            quatf xformOp:orient = (0.94275475, 0, 0.33348686, 0)
+                            float3 xformOp:scale = (0.005, 0.018, 0.03)
+                            double3 xformOp:translate = (0.008, 0, -0.23)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "right_hind_Link4" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/right_front_Link4>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, -0.275)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "RR_foot" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            quatf xformOp:orient = (1, 0, 0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, -0.275)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                            def Sphere "RR" (
+                                prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+                            )
+                            {
+                                float3[] extent = [(-0.032, -0.032, -0.032), (0.032, 0.032, 0.032)]
+                                rel material:binding:physics = </a2_piper_x/Physics/PhysicsMaterial_1>
+                                color3f[] primvars:displayColor = [(0.698039, 0.698039, 0.698039)] (
+                                    interpolation = "constant"
+                                )
+                                int[] primvars:displayColor:indices = None
+                                float[] primvars:displayOpacity = [1] (
+                                    interpolation = "constant"
+                                )
+                                int[] primvars:displayOpacity:indices = None
+                                uniform token purpose = "guide"
+                                double radius = 0.032
+                                quatf xformOp:orient = (1, 0, 0, 0)
+                                float3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+                }
+            }
+
+            def Xform "piperx_mount" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0.1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "px_visual_base_link" (
+                    displayName = ""
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/px_visual_base_link>
+                    uiHints = {
+                        string displayName = ""
+                    }
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "link1" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    quatf xformOp:orient = (2.6794897e-8, 0, 0, 1)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0.123)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "px_visual_link1" (
+                        displayName = ""
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/px_visual_link1>
+                        uiHints = {
+                            string displayName = ""
+                        }
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "link2" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        quatf xformOp:orient = (0.7054777, 0.7054777, -0.04797094, 0.047970977)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "px_visual_link2" (
+                            displayName = ""
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/px_visual_link2>
+                            uiHints = {
+                                string displayName = ""
+                            }
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "link3" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            quatf xformOp:orient = (0.1511746, 0, 0, 0.9885071)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0.28503, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                            def Xform "px_visual_link3" (
+                                displayName = ""
+                                instanceable = true
+                                prepend references = @./instances.usda@</Instances/px_visual_link3>
+                                uiHints = {
+                                    string displayName = ""
+                                }
+                            )
+                            {
+                                quatd xformOp:orient = (1, 0, 0, 0)
+                                double3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+
+                            def Xform "link4" (
+                                prepend apiSchemas = ["IsaacLinkAPI"]
+                            )
+                            {
+                                quatf xformOp:orient = (0.9991874, 0, 0, 0.040305335)
+                                float3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0.27364, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                                def Xform "px_visual_link4" (
+                                    displayName = ""
+                                    instanceable = true
+                                    prepend references = @./instances.usda@</Instances/px_visual_link4>
+                                    uiHints = {
+                                        string displayName = ""
+                                    }
+                                )
+                                {
+                                    quatd xformOp:orient = (1, 0, 0, 0)
+                                    double3 xformOp:scale = (1, 1, 1)
+                                    double3 xformOp:translate = (0, 0, 0)
+                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                }
+
+                                def Xform "link5" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                    quatf xformOp:orient = (0.5, -0.5, 0.5, 0.5)
+                                    float3 xformOp:scale = (1, 1, 1)
+                                    double3 xformOp:translate = (0.07466, 0, 0)
+                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                                    def Xform "px_visual_link5" (
+                                        displayName = ""
+                                        instanceable = true
+                                        prepend references = @./instances.usda@</Instances/px_visual_link5>
+                                        uiHints = {
+                                            string displayName = ""
+                                        }
+                                    )
+                                    {
+                                        quatd xformOp:orient = (1, 0, 0, 0)
+                                        double3 xformOp:scale = (1, 1, 1)
+                                        double3 xformOp:translate = (0, 0, 0)
+                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                    }
+
+                                    def Xform "link6" (
+                                        prepend apiSchemas = ["IsaacLinkAPI"]
+                                    )
+                                    {
+                                        quatf xformOp:orient = (0.7071068, 0.7071067, 0, 0)
+                                        float3 xformOp:scale = (1, 1, 1)
+                                        double3 xformOp:translate = (0, -0.035, 0)
+                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                                        def Xform "px_visual_link6" (
+                                            displayName = ""
+                                            instanceable = true
+                                            prepend references = @./instances.usda@</Instances/px_visual_link6>
+                                            uiHints = {
+                                                string displayName = ""
+                                            }
+                                        )
+                                        {
+                                            quatd xformOp:orient = (1, 0, 0, 0)
+                                            double3 xformOp:scale = (1, 1, 1)
+                                            double3 xformOp:translate = (0, 0, 0)
+                                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                        }
+
+                                        def Xform "piperx_flange" (
+                                            prepend apiSchemas = ["IsaacLinkAPI"]
+                                        )
+                                        {
+                                            quatf xformOp:orient = (1, 0, 0, 0)
+                                            float3 xformOp:scale = (1, 1, 1)
+                                            double3 xformOp:translate = (0, 0, 0)
+                                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                                            def Xform "px_visual_flange_link" (
+                                                displayName = ""
+                                                instanceable = true
+                                                prepend references = @./instances.usda@</Instances/px_visual_flange_link>
+                                                uiHints = {
+                                                    string displayName = ""
+                                                }
+                                            )
+                                            {
+                                                quatd xformOp:orient = (1, 0, 0, 0)
+                                                double3 xformOp:scale = (1, 1, 1)
+                                                double3 xformOp:translate = (0, 0, 0)
+                                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                            }
+
+                                            def Xform "piperx_gripper_base" (
+                                                prepend apiSchemas = ["IsaacLinkAPI"]
+                                            )
+                                            {
+                                                quatf xformOp:orient = (0.7071068, 0, 0, 0.7071067)
+                                                float3 xformOp:scale = (1, 1, 1)
+                                                double3 xformOp:translate = (0, 0, 0.0045)
+                                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                                                def Xform "px_visual_gripper_base" (
+                                                    displayName = ""
+                                                    instanceable = true
+                                                    prepend references = @./instances.usda@</Instances/px_visual_gripper_base>
+                                                    uiHints = {
+                                                        string displayName = ""
+                                                    }
+                                                )
+                                                {
+                                                    quatd xformOp:orient = (1, 0, 0, 0)
+                                                    double3 xformOp:scale = (1, 1, 1)
+                                                    double3 xformOp:translate = (0, 0, 0)
+                                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                                }
+
+                                                def Sphere "attachment_site"
+                                                {
+                                                    float3[] extent = [(-0.01, -0.01, -0.01), (0.01, 0.01, 0.01)]
+                                                    color3f[] primvars:displayColor = [(1, 0, 0)] (
+                                                        interpolation = "constant"
+                                                    )
+                                                    int[] primvars:displayColor:indices = None
+                                                    float[] primvars:displayOpacity = [1] (
+                                                        interpolation = "constant"
+                                                    )
+                                                    int[] primvars:displayOpacity:indices = None
+                                                    uniform token purpose = "guide"
+                                                    double radius = 0.01
+                                                    quatf xformOp:orient = (1, 0, 0, 0)
+                                                    float3 xformOp:scale = (1, 1, 1)
+                                                    double3 xformOp:translate = (0, 0, 0.138)
+                                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                                }
+
+                                                def Xform "link7" (
+                                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                                )
+                                                {
+                                                    quatf xformOp:orient = (0.7071068, 0.7071067, 0, 0)
+                                                    float3 xformOp:scale = (1, 1, 1)
+                                                    double3 xformOp:translate = (0, 0, 0.138)
+                                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                                                    def Xform "px_visual_gripper_link1" (
+                                                        displayName = ""
+                                                        instanceable = true
+                                                        prepend references = @./instances.usda@</Instances/px_visual_gripper_link1>
+                                                        uiHints = {
+                                                            string displayName = ""
+                                                        }
+                                                    )
+                                                    {
+                                                        quatd xformOp:orient = (1, 0, 0, 0)
+                                                        double3 xformOp:scale = (1, 1, 1)
+                                                        double3 xformOp:translate = (0, 0, 0)
+                                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                                    }
+                                                }
+
+                                                def Xform "link8" (
+                                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                                )
+                                                {
+                                                    quatf xformOp:orient = (-1.8946855e-8, -1.8946853e-8, 0.70710677, 0.70710677)
+                                                    float3 xformOp:scale = (1, 1, 1)
+                                                    double3 xformOp:translate = (0, 0, 0.138)
+                                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                                                    def Xform "px_visual_gripper_link2" (
+                                                        displayName = ""
+                                                        instanceable = true
+                                                        prepend references = @./instances.usda@</Instances/px_visual_gripper_link2>
+                                                        uiHints = {
+                                                            string displayName = ""
+                                                        }
+                                                    )
+                                                    {
+                                                        quatd xformOp:orient = (1, 0, 0, 0)
+                                                        double3 xformOp:scale = (1, 1, 1)
+                                                        double3 xformOp:translate = (0, 0, 0)
+                                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    def Scope "Materials"
+    {
+    }
+
+    def Scope "Physics"
+    {
+        def Material "PhysicsMaterial"
+        {
+        }
+
+        def Material "PhysicsMaterial_1"
+        {
+        }
+    }
+
+    def Scope "VisualMaterials"
+    {
+    }
+}
+
