@@ -42,6 +42,8 @@ python -m pip install -e source/locomanipulation_teleop_isaaclab
 
  python scripts/rsl_rl/train.py   --task=LocoManipulation-A2-Flat   --num_envs=4096   --logger=tensorboard
 
+python scripts/rsl_rl/train.py   --task=LocoManipulation-A2-PiperX-Flat   --num_envs=4096   --max_iterations=10000   --logger=tensorboard
+
 python scripts/rsl_rl/train.py --task=LocoManipulation-Go2-Flat --num_envs=4096 
 
 python scripts/rsl_rl/train.py --task=LocoManipulation-Go2-Rough-Blind --num_envs=4096 

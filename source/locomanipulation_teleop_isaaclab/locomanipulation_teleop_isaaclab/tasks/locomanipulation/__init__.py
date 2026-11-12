@@ -83,3 +83,18 @@ gym.register(
         "rsl_rl_cfg_entry_point": f"{agents.__name__}.rsl_rl_ppo_cfg:RoughPPORunnerCfg",
     },
 )
+
+
+from .a2_piperx_env_cfg import A2PiperXFlatEnvCfg
+
+gym.register(
+    id="LocoManipulation-A2-PiperX-Flat",
+    entry_point=LocomotionManipulationEnv,
+    disable_env_checker=True,
+    kwargs={
+        "env_cfg_entry_point": A2PiperXFlatEnvCfg,
+        "rsl_rl_cfg_entry_point": (
+            f"{agents.__name__}.rsl_rl_ppo_cfg:FlatPPORunnerCfg"
+        ),
+    },
+)

@@ -108,8 +108,10 @@ class Console():
 
                 elif(input_string == "activateArm"):
                     self.isArmActivated = not self.isArmActivated
-                    self.controller_node.desired_joint_pos_arm = np.zeros(6)
-
+                    # self.controller_node.desired_joint_pos_arm = np.zeros(6)
+                    self.controller_node.desired_joint_pos_arm = np.array(
+                        self.controller_node.mjData.qpos[19:25], copy=True
+                    )
 
                 elif(input_string == "help"):
                     self.print_all_commands()

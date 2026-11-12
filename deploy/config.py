@@ -26,7 +26,7 @@ elif(robot == "a2"):
     Kd_stand_up_and_down = 5.
 
     # locomotion_policy_folder_path = dir_path + "/../tested_policies/" + robot + "/arm_moving_clock"
-    locomotion_policy_folder_path = "logs/rsl_rl/flat_direct/2026-11-11_13-59-09"
+    locomotion_policy_folder_path = "logs/rsl_rl/flat_direct/2026-11-11_17-09-10"
 
 # MuJoCo model of the robot with the arm, in the chosen scene
 robot_model_path = dir_path + "/../robot_model/" + robot + "_piper_l_" + scene + ".xml"

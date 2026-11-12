@@ -21,7 +21,8 @@ from heightmap import HeightMap
 
 # Trash Policy imports
 from locomotion_policy_wrapper import LocomotionPolicyWrapper
-from ik_mink import IKMink
+# from ik_mink import IKMink
+from ik_mink_piperx import IKMink
 
 
 import config
@@ -79,7 +80,9 @@ class PlayMujoco:
         self.legs_joints_velocity = np.zeros(12)  # 12 leg joints
         
         self.desired_joint_pos_leg = self.mjData.qpos[7:19] 
-        self.desired_joint_pos_arm = self.mjData.qpos[19:25] 
+        # self.desired_joint_pos_arm = self.mjData.qpos[19:25] 
+        self.desired_joint_pos_arm = self.mjData.qpos[19:25].copy()
+        self.ref_ee_lin_pos = None 
         self.desired_joint_pos_gripper = 0.0
         self.desired_pose_command = np.zeros(2)
         self.Kp_legs = 0
@@ -150,7 +153,26 @@ class PlayMujoco:
                 reference_joints_position, \
                 ik_succeded = self.ik_mink_solver.compute(target_pos, target_quat, initial_joints_position, 
                                                         initial_base_pose, optimize_height=True, optimize_pitch=True)"""
+            # PiperX IK: 50 Hz
+            if (
+                self.console.isArmActivated
+                and self.ref_ee_lin_pos is not None
+                and step_num % 10 == 0
+            ):
+                _, q_arm_ik, ik_ok = self.ik_mink_solver.compute(
+                    target_pos=np.array(self.ref_ee_lin_pos, copy=True),
+                    target_quat=np.array([1.0, 0.0, 0.0, 0.0]),
+                    initial_joints_position=np.array(joints_pos_arm, copy=True),
+                    initial_base_pose=np.zeros(2),
+                    optimize_height=False,
+                    optimize_pitch=False,
+                )
 
+                if ik_ok:
+                    old = np.array(self.desired_joint_pos_arm, copy=True)
+                    self.desired_joint_pos_arm = old + np.clip(
+                        q_arm_ik - old, -0.03, 0.03
+                    )
             # RL controller --------------------------------------------------------------
             if self.console.isRLActivated and step_num % round(1 / (self.locomotion_policy.RL_FREQ * self.simulation_dt)) == 0:            
                 
